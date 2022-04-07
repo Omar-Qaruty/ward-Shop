@@ -1,6 +1,6 @@
 .category-container {
   min-width: 30%;
-  height: 240px;
+  height: 340px;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
@@ -8,6 +8,8 @@
   border: 1px solid black;
   margin: 0 7.5px 15px;
   overflow: hidden;
+  border-radius: 7px;
+  box-shadow: 6px 6px 12px #d2d6d3, -6px -6px 12px #e6e8e6;
 
   &:hover {
     cursor: pointer;

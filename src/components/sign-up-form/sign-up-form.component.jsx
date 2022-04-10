@@ -1,15 +1,16 @@
 import { useState, useContext } from "react";
 import {
-  createAuteUserWithEmailAndPassword,
-  createUserDocFromAuth,
+  createAuthUserWithEmailAndPassword,
+  createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
 import FromInput from "../form-input/form-input.component";
-import "./sign-up-styles.scss";
 import Button from "../button/button.component";
 import { UserContext } from "../../contexts/user.context";
 
+import "./sign-up-styles.scss";
+
 const defaultFormFields = {
-  name: "",
+  displayName: "",
   email: "",
   password: "",
   confirmPassword: "",
@@ -17,47 +18,41 @@ const defaultFormFields = {
 
 const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
-  const { name, email, password, confirmPassword } = formFields;
-
-  const { setCurrentUser } = useContext(UserContext);
+  const { displayName, email, password, confirmPassword } = formFields;
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
 
-  console.log(formFields);
-
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // confirm the 2 passwords matches.
     if (password !== confirmPassword) {
-      alert("passwords must confirm");
+      alert("passwords do not match");
+      return;
     }
+
     try {
-      const { user } = await createAuteUserWithEmailAndPassword(
+      const { user } = await createAuthUserWithEmailAndPassword(
         email,
         password
       );
 
-      setCurrentUser(user);
-
-      await createUserDocFromAuth(user, { name });
+      await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
-        alert("cannot create user , email is already in use");
+        alert("Cannot create user, email already in use");
       } else {
-        console.log("user creation encounterd an error", error);
+        console.log("user creation encountered an error", error);
       }
     }
-    // see if the 2 passwords do matches.
-    // create a user doc
   };
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormFields({ ...formFields, [name]: value });
+    const { displayName, value } = event.target;
+
+    setFormFields({ ...formFields, [displayName]: value });
   };
 
   return (
@@ -71,7 +66,7 @@ const SignUpForm = () => {
           required
           onChange={handleChange}
           name="name"
-          value={name}
+          value={displayName}
         />
 
         <FromInput

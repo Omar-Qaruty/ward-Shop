@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Banana 1",
+    "imageUrl": "https://cdn.filestackcontent.com/auto_image/cache=expiry:max/K84E0xOSQCKsrwL1ARWl",
+    "price": 25
+  },
+  {
+    "id": 2,
+    "name": "Banana 2",
+    "imageUrl": "https://cdn.filestackcontent.com/auto_image/cache=expiry:max/K84E0xOSQCKsrwL1ARWl",
+    "price": 18
+  },
+  {
+    "id": 3,
+    "name": "Banana 3",
+    "imageUrl": "https://cdn.filestackcontent.com/auto_image/cache=expiry:max/K84E0xOSQCKsrwL1ARWl",
+    "price": 35
+  },
+  {
+    "id": 4,
+    "name": "Banana 4",
+    "imageUrl": "https://cdn.filestackcontent.com/auto_image/cache=expiry:max/K84E0xOSQCKsrwL1ARWl",
+    "price": 25
+  },
+  {
+    "id": 5,
+    "name": "Banana 5",
+    "imageUrl": "https://cdn.filestackcontent.com/auto_image/cache=expiry:max/K84E0xOSQCKsrwL1ARWl",
+    "price": 18
+  },
+  {
+    "id": 6,
+    "name": "Banana 6",
+    "imageUrl": "https://cdn.filestackcontent.com/auto_image/cache=expiry:max/K84E0xOSQCKsrwL1ARWl",
+    "price": 14
+  },
+  {
+    "id": 7,
+    "name": "Banana 7",
+    "imageUrl": "https://cdn.filestackcontent.com/auto_image/cache=expiry:max/K84E0xOSQCKsrwL1ARWl",
+    "price": 18
+  },
+  {
+    "id": 8,
+    "name": "Banana 8",
+    "imageUrl": "https://cdn.filestackcontent.com/auto_image/cache=expiry:max/K84E0xOSQCKsrwL1ARWl",
+    "price": 14
+  },
+  {
+    "id": 9,
+    "name": "Banana 9",
+    "imageUrl": "https://cdn.filestackcontent.com/auto_image/cache=expiry:max/K84E0xOSQCKsrwL1ARWl",
+    "price": 16
+  }
+]

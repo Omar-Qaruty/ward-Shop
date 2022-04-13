@@ -2,10 +2,7 @@ import { Routes, Route, Outlet } from "react-router-dom";
 import Home from "./routes/home/home.compnenent";
 import Navigation from "./routes/navigation/navigation.componenet";
 import Auth from "./routes/authentication/auth.component";
-
-const Shop = () => {
-  return <h1>Shop in bound</h1>;
-};
+import Shop from "./routes/shop/shop.component";
 
 const App = () => {
   return (

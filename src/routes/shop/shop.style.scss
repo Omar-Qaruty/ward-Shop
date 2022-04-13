@@ -1,0 +1,8 @@
+.products-container {
+  display: grid;
+  //   1fr equaly distpute the distance between the grids
+  // if its 100px then it will be 100/4 = 25px
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 50px;
+}
